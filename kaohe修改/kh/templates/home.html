@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>武汉天气</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1 class="text-center " style="color:darkgray;font-size:40px">武汉天气</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                <h3 class="panel-title">日期</h3>
+                </div>
+                <div class="panel-body">
+                {% for date in dates %}
+                <ul class="list-unstyled text-center">
+                    <li>{{ date }}</li>
+                </ul>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                <h3 class="panel-title">天气</h3>
+                </div>
+                <div class="panel-body">
+                {% for weather in weathers %}
+                <ul class="list-unstyled text-center">
+                    <li>{{ weather }}</li>
+                </ul>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                <h3 class="panel-title">温度</h3>
+                </div>
+                <div class="panel-body">
+                {% for temp in temps %}
+                <ul class="list-unstyled text-center">
+                    <li>{{ temp }}</li>
+                </ul>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
